@@ -175,6 +175,8 @@ total_cases(:,1) = y(:,2) + y(:,3) + y(:,4);
 figure(d);
 hold on
 plot( t, y(:,4)*0.04);
+set(gca, 'YScale', 'log');
+ylim([1 10^6]);
 xlabel('time(days)');
 ylabel('Deaths');
 legend('S1','S2','S3','S4');
@@ -183,6 +185,8 @@ legend('S1','S2','S3','S4');
 figure(h);
 hold on
 plot(t,y(:,3)*0.08);
+set(gca, 'YScale', 'log');
+ylim([0 1e+5]);
 yline(3500);
 legend('S1','S2','S3','S4','care beds');
 
@@ -190,6 +194,8 @@ legend('S1','S2','S3','S4','care beds');
 figure(i);
 hold on
 plot(t,y(:,3)*0.01);
+set(gca, 'YScale', 'log');
+ylim([0 inf]);
 yline(160);
 legend('S1','S2','S3','S4','ICU beds');
 
