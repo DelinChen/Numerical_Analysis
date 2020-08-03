@@ -16,3 +16,4 @@ function  yprime = seir(t,y, par)
     yprime(2) = +beta*y(1)*y(3)/N - alpha*y(2);
     yprime(3) = +alpha*y(2) -gamma*y(3);
     yprime(4) = gamma*y(3);
+end

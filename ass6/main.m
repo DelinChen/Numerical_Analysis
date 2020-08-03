@@ -20,10 +20,8 @@ total_cases(:,1) = y(:,2) + y(:,3) + y(:,4);
 
 % Scenario 1
 % deaths
-d = figure;
-plot( t, y(:,4)*0.04);
-xlabel('time(days)');
-ylabel('Deaths');
+death = zeros(4,1);
+death(1) = y(length(y),4)*0.04/5;
 
 % hospital
 h = figure;
@@ -72,11 +70,7 @@ clear total_cases
 total_cases(:,1) = y(:,2) + y(:,3) + y(:,4);
 
 % deaths
-figure(d);
-hold on
-plot( t, y(:,4)*0.04);
-xlabel('time(days)');
-ylabel('Deaths');
+death(2) = y(length(y),4)*0.04/5;
 
 % hospital
 figure(h);
@@ -122,11 +116,7 @@ clear total_cases
 total_cases(:,1) = y(:,2) + y(:,3) + y(:,4);
 
 % deaths
-figure(d);
-hold on
-plot( t, y(:,4)*0.04);
-xlabel('time(days)');
-ylabel('Deaths');
+death(3) = y(length(y),4)*0.04/5;
 
 % hospital
 figure(h);
@@ -172,14 +162,7 @@ clear total_cases
 total_cases(:,1) = y(:,2) + y(:,3) + y(:,4);
 
 % Deaths
-figure(d);
-hold on
-plot( t, y(:,4)*0.04);
-set(gca, 'YScale', 'log');
-ylim([1 10^6]);
-xlabel('time(days)');
-ylabel('Deaths');
-legend('S1','S2','S3','S4');
+death(4) = y(length(y),4)*0.04/5;
 
 % hospital
 figure(h);
